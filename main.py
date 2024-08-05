@@ -3,18 +3,18 @@ import psycopg2
 from psycopg2 import sql
 
 # URL of the public Google Sheet (in CSV format)
-google_sheet_url = 'https://docs.google.com/spreadsheets/d/{YOUR_SHEET_ID}/export?format=csv'
-
+#google_sheet_url = 'https://docs.google.com/spreadsheets/d/{YOUR_SHEET_ID}/export?format=csv'
+google_sheet_url = 'https://docs.google.com/spreadsheets/d/1c25Wx-RI6cF6TA1BWZfeekNlORdeoV7dSA9MKOyXPyk/export?format=csv'
 # Load the data into a pandas DataFrame
 df = pd.read_csv(google_sheet_url)
 
 # PostgreSQL Setup
 conn = psycopg2.connect(
-    dbname='your_dbname',
-    user='your_username',
-    password='your_password',
-    host='your_host',
-    port='your_port'
+    dbname='IfasFest23',
+    user='user-name@domain-name.com',
+    password='examples',
+    host='localhost',
+    port='5432'
 )
 
 # Create a cursor object
