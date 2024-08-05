@@ -4,15 +4,15 @@ from psycopg2 import sql
 
 # URL of the public Google Sheet (in CSV format)
 #google_sheet_url = 'https://docs.google.com/spreadsheets/d/{YOUR_SHEET_ID}/export?format=csv'
-google_sheet_url = 'https://docs.google.com/spreadsheets/d/1c25Wx-RI6cF6TA1BWZfeekNlORdeoV7dSA9MKOyXPyk/export?format=csv'
+google_sheet_url = 'https://docs.google.com/spreadsheets/d/17vJELFsTBPBjmL_HMBd8L_x-Vi5KpJ8WeOOCLNhLtZI/export?format=csv'
 # Load the data into a pandas DataFrame
 df = pd.read_csv(google_sheet_url)
 
 # PostgreSQL Setup
 conn = psycopg2.connect(
-    dbname='IfasFest23',
-    user='user-name@domain-name.com',
-    password='examples',
+    dbname='coba',
+    user='superset',
+    password='superset',
     host='localhost',
     port='5432'
 )
